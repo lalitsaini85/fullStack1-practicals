@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-8</title>
+    <style>
+        #container{
+            display: block;
+            padding: 10px;
+            align-items: center;
+            position: center;
+            width: 100%;
+            position: absolute;
+            margin: 0px auto;
+        }
+        .banner{
+            background-color: skyblue;
+            height: 680px;
+            width: 100%;
+            text-align: left;
+            font-size: 40px;
+            font-weight: bold;
+            background-image: url(../Images/desktop.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+        }
+
+        .header{
+            position: fixed;
+            background-color: gray;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            color: white;
+            font-size: 30px;
+            margin-bottom: 5px;
+            width: 100%;
+            padding: 0px 20px;
+        }
+        .header ul{
+            display: flex;
+            list-style: none;
+        }
+        .header ul li a{
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+        }
+        .header ul li a:hover{
+            color: black;
+            background-color: white;
+        }
+        .section{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: red; */
+            font-size: 40px;
+            font-weight: bold;
+            height: 50px;
+        }
+        .circleContainer{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .circle img{
+            background-color: goldenrod;
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+        }
+        .section1{
+            text-align: center;
+        }
+        .section2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .content{
+            background-color: lightslategray;
+            display: flex;
+            flex-direction: column;
+            height: 480px;
+            width: 50%;
+            text-align: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .content h2{
+            text-align: left;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+        }
+        .content p{
+            text-align: justify;
+            font-size: 20px;
+            padding: 10px;
+            color: white;
+            font-family: arial;
+        }
+        .articleBox{
+            height: 480px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        .article{
+            display: flex;
+            /* text-align:center; */
+            justify-content: center;
+            margin-bottom: 15px;
+            background-color: orange;
+            height: 150px;
+            font-size: 40px;
+            font-weight: bold;
+            background-size: cover;
+        }
+        .section{
+            text-align: center;
+        }
+        .squareContainer{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .square{
+            height: 410px;
+            width: 250px;
+            margin: 25px;
+        }
+        .footer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: pink;
+            height: 70px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 10px;
+            text-align: center;
+        }
+        .mybutton{
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            color: white;
+            font-family: Arial;
+            background-color: red;
+            padding: 10px 40px;
+            border-radius: 10px;
+        }
+        .box {
+            width: 250px;
+            height: 400px;
+            background-color: white;
+            text-align: justify;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+        .box img{
+            width: 100%;
+            height: 180px;
+            border-radius: 20px;
+        }
+        .mybutton:hover{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body><div id="container">
+    <div class="header">
+        <ul>
+            <li> <a href="#Top">HOME</a></li>
+            <li><a href="#About">ABOUT</a></li>
+            <li><a href="#Team">TEAM</a></li>
+            <li><a href="#technology">TECHNOLOGY</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+        </div>
+    <div class="banner">
+        <h2 style="color: white;padding: 10px;">PRACTICAL-8</h2>
+    </div>
+        <div class="section">Team Members</div>
+    <div class="section1">
+        <div class="circleContainer">
+            <div class="circle"><img src="../Images/member1.jpeg" alt=""></div>
+            <div class="circle"><img src="../Images/member2.jpeg" alt=""></div>
+            <div class="circle"><img src="../Images/member3.jpeg" alt=""></div>
+            <div class="circle"><img src="../Images/member4.jpeg" alt=""></div>
+        </div>
+    </div>
+    <h2 class="section">About Us</h2>
+    <div class="section2">
+        <div class="content">
+            <h2>Projects</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla perferendis temporibus incidunt consequatur nobis, velit dolore? Debitis obcaecati nihil, laborum sit nobis iure sint pariatur quidem, qui dolor odit vitae autem laboriosam illum cupiditate reiciendis repudiandae quos asperiores animi soluta et! Vero assumenda asperiores soluta quis maxime suscipit facere aspernatur explicabo delectus quasi, minima nulla at enim omnis ipsum quod libero? Earum placeat eaque magnam esse perferendis accusantium qui assumenda a aut labore. Explicabo, harum dolorum dolore magnam debitis non veritatis molestiae repellendus ullam, nostrum praesentium neque quidem eveniet ipsam tempora commodi suscipit aperiam voluptatibus? Deserunt maiores voluptas magni earum.</p>
+            </div>
+        <div class="articleBox">
+            <div class="article" style="background-image: url(../Images/project4.jpg);background-size: cover;
+            background-position-x: center;
+            background-position-y: center;"><p style="margin-top: 0%;">Project-1</p></div>
+            <div class="article" style="background-image: url(../Images/project1.jpg);background-size: cover;
+            background-position-x: center;
+            background-position-y: center;"><p style="margin-top: 0%;">Project-2</p></div>
+            <div class="article" style="margin-bottom: 0px;background-image: url(../Images/project2.png);background-size: cover;
+            background-position-x: center;
+            background-position-y: center;"><p style="margin-top: 0%;">Project-3</p></div>
+        </div>
+    </div>
+    <div class="section" style="margin-top: 20px;margin-bottom: 0px;">Technologies Used</div>
+    <div class="squareContainer">
+        <div class="square">
+            <div class="box">
+            <div class="image"><img src="../Images/htmlIntro.png" style="justify-content: center; padding: 10px;"></div>
+            <h3 style="text-align: center;">Introduction to HTML</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate consequatur temporibus quae doloribus perferendis cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos? Ipsum laudantium aspernatur ex!</p>
+            <div class="image" style="text-align: center;"><a href="./htmlintro.html" class="mybutton">Read More</a>
+            </div>
+        </div>
+        </div>
+        <div class="square">
+            <div class="box">
+                <div class="image"><img src="../Images/CssStyle.png" style="justify-content: center; padding: 10px;"></div>
+                <h3 style="text-align: center;">Introduction to CSS</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate consequatur temporibus quae doloribus perferendis cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos? Ipsum laudantium aspernatur ex!</p>
+                <div class="image" style="text-align: center;"><a href="./cssintro.html" class="mybutton">Read More</a></div>
+            </div>
+        </div>
+        <div class="square"><div class="box">
+            <div class="image"><img src="../Images/Jquery.png" style="justify-content: center; padding: 10px;"></div>
+            <h3 style="text-align: center;">Introduction to JavaScript</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate consequatur temporibus quae doloribus perferendis cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos? Ipsum laudantium aspernatur ex!</p>
+            <div class="image" style="text-align: center;"><a href="./javascriptintro.html" class="mybutton">Read More</a></div>
+        </div></div>
+        <div class="square"><div class="box">
+            <div class="image"><img src="../Images/BootStrap.jpg" style="justify-content: center; padding: 10px;"></div>
+            <h3 style="text-align: center;">Introduction to BootStrap</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptate consequatur temporibus quae doloribus perferendis cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos? Ipsum laudantium aspernatur ex!</p>
+            <div class="image" style="text-align: center;"><a href="./bootstrapintro.html" class="mybutton">Read More</a></div>
+        </div></div>
+    </div>
+    <div class="section" style="margin-top: 20px;">Contact</div>
+    <div class="footer">
+        <p>Website Template for Practical-8 © <a href="https://www.beta-labs.in/">Beta-labs</a>
+        <br>
+        <a href="#Top">Back to Top</a>
+        </p>
+    </div>
+    </div>
+</body>
+</html>
