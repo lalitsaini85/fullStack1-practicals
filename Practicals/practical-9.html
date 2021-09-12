@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Practical-9</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .banner {
+        padding: 20px;
+        background-color: skyblue;
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        max-width: 1400px;
+        text-align: left;
+        font-size: 40px;
+        font-weight: bold;
+        background-image: url(../Images/desktop.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-x: center;
+        background-position-y: center;
+        margin-top: 10px;
+      }
+
+      .header {
+        top: 0px;
+        background-color: gray;
+        /* display:flex; */
+        height: 60px;
+        color: white;
+        font-size: 20px;
+        width: 100%;
+        padding: 0px 20px;
+        position: fixed;
+        /* margin-bottom: 10px; */
+      }
+      .header ul {
+        /* display: flex; */
+        list-style: none;
+        float: right;
+      }
+      .header ul li {
+        /* line-height: 60px; */
+        display: inline-block;
+      }
+      .header ul li a {
+        text-decoration: none;
+        line-height: 60px;
+        color: white;
+        padding: 10px;
+      }
+      .header ul li a:hover {
+        color: orange;
+        background-color: white;
+      }
+      .section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        font-size: 40px;
+        font-weight: bold;
+        height: 50px;
+      }
+      .circleContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .circle img {
+        background-color: goldenrod;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+      }
+      .section1 {
+        text-align: center;
+      }
+      .section2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .content {
+        background-color: lightslategray;
+        display: flex;
+        flex-direction: column;
+        height: 480px;
+        width: 50%;
+        text-align: center;
+        font-weight: bold;
+        margin-right: 10px;
+      }
+      .content h2 {
+        text-align: left;
+        font-weight: bold;
+        color: white;
+        padding: 10px;
+      }
+      .content p {
+        text-align: justify;
+        font-size: 20px;
+        padding: 10px;
+        color: white;
+        font-family: arial;
+      }
+      .articleBox {
+        height: 480px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+      }
+      .article {
+        display: flex;
+        /* text-align:center; */
+        justify-content: center;
+        margin-bottom: 15px;
+        background-color: orange;
+        height: 150px;
+        font-size: 40px;
+        font-weight: bold;
+        background-size: cover;
+      }
+      .section {
+        text-align: center;
+      }
+      .squareContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .square {
+        height: 410px;
+        width: 250px;
+        margin: 25px;
+      }
+      .footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: pink;
+        height: 70px;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .mybutton {
+        display: block;
+        margin-top: 10px;
+        text-decoration: none;
+        color: white;
+        font-family: Arial;
+        background-color: red;
+        padding: 10px 40px;
+        border-radius: 10px;
+      }
+      .box {
+        width: 250px;
+        height: 400px;
+        background-color: white;
+        text-align: justify;
+        border: 2px solid white;
+        border-radius: 10px;
+      }
+      .box img {
+        width: 100%;
+        height: 180px;
+        border-radius: 20px;
+      }
+      .mybutton:hover {
+        background-color: blue;
+      }
+      .show-btn,
+      .hide-btn {
+        font-size: 25px;
+        color: white;
+        line-height: 60px;
+        display: none;
+      }
+      .show-btn {
+        float: right;
+      }
+      #chk {
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+      }
+      @media (min-width: 625) and (max-width: 1199px) {
+        .circleContainer {
+          width: 100%;
+          display: block;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+        .circle img {
+          height: 250px;
+          width: 250px;
+          border-radius: 50%;
+          background-color: goldenrod;
+          float: left;
+          margin-left: 15%;
+          margin-bottom: 20px;
+        }
+      }
+      @media (max-width: 800px) {
+        .show-btn,
+        .hide-btn {
+          display: block;
+        }
+        .menu {
+          position: fixed;
+          line-height: normal;
+          width: 100%;
+          height: 100vh;
+          top: 0;
+          right: -100%;
+          background-color: black;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          padding: 80px 0;
+          transition: 0.5s;
+        }
+        #chk:checked ~ .menu {
+          right: 0;
+        }
+        .menu li {
+          display: block;
+        }
+        .menu li a {
+          display: block;
+        }
+        .hide-btn {
+          position: absolute;
+          top: 1px;
+          right: 20px;
+        }
+        .header {
+          width: 100%;
+          background-color: grey;
+          position: fixed;
+          top: 0;
+          height: 70px;
+        }
+        .banner {
+          width: 100%;
+          margin-bottom: 15px;
+          height: 350px;
+          display: flex;
+          font-size: 30px;
+          color: white;
+        }
+        .banner h2 {
+          /* margin: 10px 20px; */
+          color: white;
+        }
+        .circleContainer {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          flex-flow: wrap;
+          align-items: center;
+          justify-content: space-evenly;
+        }
+        .circle img {
+          height: 250px;
+          width: 250px;
+          border-radius: 50%;
+          float: left;
+          /* margin-left: 6%; */
+          margin-bottom: 20px;
+        }
+        .squareContainer {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .section2 {
+          display: flex;
+          flex-direction: column;
+        }
+        .content {
+          width: 100%;
+          height: 200px;
+          background-color: lightslategray;
+          color: white;
+          margin-bottom: 20px;
+        }
+        .content h2 {
+          text-align: left;
+          margin: 5px 5px;
+        }
+        .content p {
+          font-size: 20px;
+          padding: 10px;
+          text-align: justify;
+          line-height: 28px;
+        }
+        .articleBox {
+          width: 100%;
+          height: 400px;
+        }
+        .article {
+          height: 31%;
+          margin-bottom: 20px;
+          background-color: chocolate;
+          display: flex;
+          justify-content: center;
+          font-size: 16px;
+          font-family: Arial, Helvetica, sans-serif;
+          color: black;
+          overflow: hidden;
+        }
+        .section {
+          font-size: 30px;
+          text-align: center;
+        }
+        .squareContainer {
+          display: flex;
+          flex-wrap: wrap;
+          /* flex-direction: column; */
+        }
+      }
+      @media (max-width: 625px) {
+        .show-btn {
+          display: block;
+        }
+
+        .menu {
+          position: fixed;
+          top: 0;
+          right: -100%;
+          width: 100%;
+          background-color: black;
+          text-align: center;
+          padding: 80px 0px;
+          line-height: normal;
+          transition: 0.5s;
+        }
+
+        .menu li {
+          display: block;
+        }
+
+        .manu li a {
+          display: block;
+        }
+
+        #chk:checked ~ .menu {
+          right: 0;
+        }
+
+        .hide-btn {
+          display: block;
+          position: absolute;
+          right: 20px;
+          top: 10px;
+        }
+
+        .banner {
+          width: 100%;
+          height: 250px;
+          margin-bottom: 15px;
+          color: white;
+        }
+
+        .banner h2 {
+          /* margin: 5px 10px; */
+          color: white;
+          font-size: 20px;
+        }
+
+        .circleContainer {
+          width: 90%;
+          margin-left: 10%;
+        }
+
+        .circle img {
+          height: 70%;
+          width: 70%;
+
+          border-radius: 50%;
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <input type="checkbox" id="chk" />
+      <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul class="menu">
+        <li><a href="#Top">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#Team">TEAM</a></li>
+        <li><a href="#technology">TECHNOLOGY</a></li>
+        <li><a href="#Contact">CONTACT</a></li>
+        <label for="chk" class="hide-btn">
+          <i class="fa fa-times"></i>
+        </label>
+      </ul>
+    </div>
+    <div class="banner">
+      <h2 style="color: white; padding: 10px; margin-top: 40px">PRACTICAL-9</h2>
+    </div>
+    <a name="Team"></a>
+    <div class="section">Team Members</div>
+    <div class="section1">
+      <div class="circleContainer">
+        <div class="circle"><img src="../Images/member1.jpeg" alt="" /></div>
+        <div class="circle"><img src="../Images/member2.jpeg" alt="" /></div>
+        <div class="circle"><img src="../Images/member3.jpeg" alt="" /></div>
+        <div class="circle"><img src="../Images/member4.jpeg" alt="" /></div>
+      </div>
+    </div>
+    <a name="about"></a>
+    <h2 class="section">About Us</h2>
+    <div class="section2">
+      <div class="content">
+        <h2>Projects</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+          perferendis temporibus incidunt consequatur nobis, velit dolore?
+          Debitis obcaecati nihil, laborum sit nobis iure sint pariatur quidem,
+          qui dolor odit vitae autem laboriosam illum cupiditate reiciendis
+          repudiandae quos asperiores animi soluta et! Vero assumenda asperiores
+          soluta quis maxime suscipit facere aspernatur explicabo delectus
+          quasi, minima nulla at enim omnis ipsum quod libero? Earum placeat
+          eaque magnam esse perferendis accusantium qui assumenda a aut labore.
+          Explicabo, harum dolorum dolore magnam debitis non veritatis molestiae
+          repellendus ullam, nostrum praesentium neque quidem eveniet ipsam
+          tempora commodi suscipit aperiam voluptatibus? Deserunt maiores
+          voluptas magni earum.
+        </p>
+      </div>
+      <div class="articleBox">
+        <div
+          class="article"
+          style="
+            background-image: url(../Images/project4.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+          "
+        >
+          <p style="margin-top: 0%">Project-1</p>
+        </div>
+        <div
+          class="article"
+          style="
+            background-image: url(../Images/project1.jpg);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+          "
+        >
+          <p style="margin-top: 0%">Project-2</p>
+        </div>
+        <div
+          class="article"
+          style="
+            margin-bottom: 0px;
+            background-image: url(../Images/project2.png);
+            background-size: cover;
+            background-position-x: center;
+            background-position-y: center;
+          "
+        >
+          <p style="margin-top: 0%">Project-3</p>
+        </div>
+      </div>
+    </div>
+    <a name="technology"></a>
+    <div class="section" style="margin-top: 20px; margin-bottom: 0px">
+      Technologies Used
+    </div>
+    <div class="squareContainer">
+      <div class="square">
+        <div class="box">
+          <div class="image">
+            <img
+              src="../Images/htmlIntro.png"
+              style="justify-content: center; padding: 10px"
+            />
+          </div>
+          <h3 style="text-align: center">Introduction to HTML</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            voluptate consequatur temporibus quae doloribus perferendis
+            cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos?
+            Ipsum laudantium aspernatur ex!
+          </p>
+          <div class="image" style="text-align: center">
+            <a href="./htmlintro.html" class="mybutton">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="square">
+        <div class="box">
+          <div class="image">
+            <img
+              src="../Images/CssStyle.png"
+              style="justify-content: center; padding: 10px"
+            />
+          </div>
+          <h3 style="text-align: center">Introduction to CSS</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            voluptate consequatur temporibus quae doloribus perferendis
+            cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos?
+            Ipsum laudantium aspernatur ex!
+          </p>
+          <div class="image" style="text-align: center">
+            <a href="./cssintro.html" class="mybutton">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="square">
+        <div class="box">
+          <div class="image">
+            <img
+              src="../Images/Jquery.png"
+              style="justify-content: center; padding: 10px"
+            />
+          </div>
+          <h3 style="text-align: center">Introduction to JavaScript</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            voluptate consequatur temporibus quae doloribus perferendis
+            cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos?
+            Ipsum laudantium aspernatur ex!
+          </p>
+          <div class="image" style="text-align: center">
+            <a href="./javascriptintro.html" class="mybutton">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="square">
+        <div class="box">
+          <div class="image">
+            <img
+              src="../Images/BootStrap.jpg"
+              style="justify-content: center; padding: 10px"
+            />
+          </div>
+          <h3 style="text-align: center">Introduction to BootStrap</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            voluptate consequatur temporibus quae doloribus perferendis
+            cupiditate ipsa itaque fugit impedit rerum saepe ut, hic quis quos?
+            Ipsum laudantium aspernatur ex!
+          </p>
+          <div class="image" style="text-align: center">
+            <a href="./bootstrapintro.html" class="mybutton">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a name="Contact"></a>
+    <div class="section" style="margin-top: 20px">Contact</div>
+    <div class="footer">
+      <p>
+        Website Template for Practical-8 ©
+        <a href="https://www.beta-labs.in/">Beta-labs</a>
+        <br />
+        <a href="#Top">Back to Top</a>
+      </p>
+    </div>
+  </body>
+</html>
