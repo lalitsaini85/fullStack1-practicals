@@ -1,379 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <title>Responsive Footer</title>
+    <title>Custom Table</title>
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-      .header {
-        display: flex;
-        height: 100px;
-        width: 100%;
-        /* text-align: center; */
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-        color: gray;
-      }
-      .content {
-        background-color: rgb(27, 25, 25);
-        height: 250px;
-        width: 100%;
-        display: flex;
-        /* flex-wrap: wrap; */
-        flex-direction: row;
-        /* flex-flow: wrap; */
-        border-bottom: 2px solid gray;
-        padding: 20px;
-        justify-content: space-between;
-      }
-      .footer {
-        width: 100%;
-      }
-      .register {
-        display: flex;
-        background-color: rgb(27, 25, 25);
-        height: 80px;
-        width: 100%;
-        border-bottom: 2px solid gray;
-        justify-content: center;
-        align-items: center;
-      }
-      .register a {
-        background-color: red;
-        padding: 10px 12px;
-        border-radius: 20px;
-        color: white;
-        text-decoration: none;
-      }
-      .register a:hover {
-        background-color: blue;
-      }
-      .social {
-        background-color: rgb(27, 25, 25);
-        height: 100px;
-        width: 100%;
-        /* border-bottom: 2px solid gray; */
-        display: flex;
-        justify-content: center;
-      }
-      .social ul {
-        list-style: none;
-        margin: 15px;
-      }
-      .social ul li {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        padding: 20px;
-        background-color: gray;
-        border-radius: 50%;
-        margin-right: 15px;
-      }
-      .social ul li i {
-        font-size: 30px;
-        line-height: 20px;
-        text-align: center;
-        color: white;
-      }
-      .social ul li:nth-child(1):hover {
-        background-color: #3b5999;
-      }
-      .social ul li:nth-child(2):hover {
-        background-color: #55acee;
-      }
-      .social ul li:nth-child(3):hover {
-        background-color: #dd4b39;
-      }
-      .social ul li:nth-child(4):hover {
-        background-color: #0077b5;
-      }
-      .social ul li:nth-child(5):hover {
-        background-color: red;
-      }
-      .rights {
-        background-color: black;
-        height: 100px;
-        width: 100%;
-        color: gray;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-      }
-      .rights p:hover {
-        right: 0;
-        bottom: -10px;
-        border-bottom: 2px solid orange;
-        transition: 0.3s;
-      }
-      .rights a {
-        text-decoration: none;
-        color: gray;
-      }
-      .rights a:hover {
-        color: orange;
-      }
-      .about {
-        width: 45%;
-        padding: 10px;
-        text-align: justify;
-        margin-right: 30px;
-      }
-      .categories {
-        width: 10%;
-        margin-right: 30px;
-        padding: 10px;
-      }
-      .categories ul {
-        list-style: none;
-      }
-      li {
-        padding: 5px;
-      }
-      .categories ul li a {
-        text-decoration: none;
-        color: gray;
-      }
-      .categories ul li a:hover {
-        color: orange;
-      }
-      .links {
-        width: 15%;
-        margin-right: 30px;
-        padding: 10px;
-      }
-      .links ul {
-        list-style: none;
-      }
-      .links ul li a {
-        text-decoration: none;
-        color: gray;
-      }
-      .links ul li a:hover {
-        color: orange;
-      }
-      .contact {
-        width: 20%;
-        margin-right: 20px;
-        padding: 10px;
-      }
-      .contact ul {
-        list-style: none;
-      }
-      .contact ul li {
-        color: gray;
-      }
-      .contact ul li a {
-        text-decoration: none;
-        color: gray;
-      }
-      .contact ul li a:hover {
-        color: orange;
-      }
-      .about p {
-        text-align: justify;
-        color: grey;
-        line-height: 24px;
-        margin-top: 10px;
-      }
-      hr {
-        opacity: 0.2;
-      }
-
-      @media (max-width: 767px) {
-        .header {
-          width: 100%;
-          height: 100px;
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:grey;
         }
-        .content {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          justify-content: space-between;
+        .content{
+            width: 40%;
+            height: 80vh;
+            background-color: white;
+            margin: auto;
         }
-        .footer {
-          width: 100%;
+        table{
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 10px solid white;
         }
-        .about {
-          width: 100%;
-          margin-bottom: 20px;
+        caption{
+            margin-top: 10px;
+            color: darkblue;
+            margin-bottom: 0px;
+            background-color: white;
         }
-        .about p {
-          text-align: justify;
-          color: grey;
-          line-height: 24px;
-          margin-top: 10px;
+        td,th{
+            border-left: 5px white solid;
         }
-        .register {
-          display: flex;
-          justify-content: center;
-          padding: 20px;
-          align-items: center;
+        th {
+            font-size: 30px;
+            padding: 10px;
         }
-        .social {
-          display: flex;
-          justify-content: center;
+        tbody tr:nth-child(odd) {
+            background-color: #E6E1E1;
         }
-        .rights {
-          display: flex;
-          justify-content: center;
+        tbody tr{
+            line-height: 40px;
         }
-        hr {
-          opacity: 0.2;
+        .price {
+            color: rgb(86, 83, 235);
+            font-size: x-large;
+            font-weight: bolder;
         }
-      }
-      @media (max-width: 499px) {
-        .header {
-          width: 100%;
-          height: 100px;
+        .fa-check {
+            color: rgb(16, 165, 16);
         }
-        .content {
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          flex-direction: row;
-          justify-content: space-between;
+        .fa-times{
+            color: red;
         }
-        .footer {
-          width: 100%;
+        a{
+            line-height: 65px;
+            text-decoration: none;
+            padding: 15px;
+            background-color: purple;
+            color: white;
+            border-radius: 30px;
         }
-        .about {
-          width: 100%;
-          margin-bottom: 20px;
+        a:hover{
+            background-color: red;
         }
-        .about p {
-          text-align: justify;
-          color: grey;
-          line-height: 24px;
-          margin-top: 10px;
-        }
-        .register {
-          display: flex;
-          justify-content: center;
-          padding: 20px;
-          align-items: center;
-        }
-        .social {
-          display: flex;
-          justify-content: center;
-        }
-        .rights {
-          display: flex;
-          justify-content: center;
-        }
-        hr {
-          opacity: 0.2;
-        }
-      }
     </style>
-  </head>
-  <body>
-    <div class="header">
-      <h1>Content Area</h1>
-    </div>
-    <div class="footer">
-      <div class="content">
-        <div class="about">
-          <h2 style="color: white">About</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam
-            nostrum aperiam voluptatibus amet dolores dolore ea itaque.
-            Assumenda ipsam corporis nesciunt totam dolores similique, adipisci
-            molestiae, neque id sapiente minima voluptas mollitia ea ut laborum
-            ab dolorem eligendi eaque, laboriosam aperiam suscipit explicabo
-            autem porro! Nulla iusto error molestiae, reiciendis eveniet
-            praesentium, accusamus, illo quis harum aspernatur impedit nesciunt.
-            Adipisci totam.
-          </p>
-        </div>
-        <div class="categories">
-          <h2 style="color: white">Categories</h2>
-          <ul>
-            <li><a href="#">C</a></li>
-            <li><a href="#">UI Designing</a></li>
-            <li><a href="#">PHP</a></li>
-            <li><a href="#">JAVA</a></li>
-            <li><a href="#">Android</a></li>
-            <li><a href="#">Hybrid Apps</a></li>
-          </ul>
-        </div>
-        <div class="links">
-          <h2 style="color: white">Quick Links</h2>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Contribute</a></li>
-            <li><a href="#">Privacy and Policy</a></li>
-            <li><a href="#">Sitemap</a></li>
-            <li><a href="#">Disclaimer</a></li>
-          </ul>
-        </div>
-        <div class="contact">
-          <h2 style="color: white">Contact Us</h2>
-          <ul>
-            <li>
-              <span style="margin-right: 10px"><i class="fa fa-home"></i></span
-              >MC-150, Rajasthan, India
-            </li>
-            <li>
-              <span style="margin-right: 10px"
-                ><i class="fa fa-envelope"></i></span
-              >rkjs123@gmail.com
-            </li>
-            <li>
-              <span style="margin-right: 10px"
-                ><i class="fa fa-phone-square"></i></span
-              >9121864124
-            </li>
-            <li>
-              <i class="fa fa-facebook-square" style="margin-right: 10px"></i
-              ><a href="#">betalabsindia</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr width="100%" noshade />
-      <div class="register">
-        <h2 style="color: gray">Register For Free <a href="#">Signup!</a></h2>
-      </div>
-      <div class="social">
-        <ul>
-          <li>
-            <a href="#"><i class="fa fa-facebook"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-google"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-          </li>
-        </ul>
-      </div>
-      <hr width="100%" noshade />
-      <div class="rights">
-        <p>
-          Copyright © 2020 All Rights Reserved by
-          <a href="https://www.beta-labs.in">Beta-Labs</a>.
-        </p>
-      </div>
-    </div>
-  </body>
+</head>
+<body>
+    <div class="container">
+    <table>
+        <caption style="border: 2px solid white;"><b style="font-size:30px;">SELECT YOUR PLAN</b></caption>
+        <colgroup>
+            <col style="background-color: rgb(147, 187, 187);">
+            <col style="background-color:rgb(167, 171, 238);">
+            <col style="background-color:rgba(191, 221, 107, 0.808);">
+            <col style="background-color:rgb(230, 139, 139)">
+        </colgroup>
+        <thead>
+            <tr>
+                <th><i class="fa fa-building"></i>Basic</th>
+                <th><i class="fa fa-superpowers"></i>Plus</th>
+                <th><i class="fa fa-telegram"></i>Deluxe</th>
+                <th><i class="fa fa-tachometer"></i>Pro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="price">
+                <td>Rs. 500/-</td>
+                <td>Rs. 1500/-</td>
+                <td>Rs. 2500/-</td>
+                <td>Rs. 3500/-</td>
+            </tr>
+            <tr>
+                <td>50 pages</td>
+                <td>75 pages</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>3 Users</td>
+                <td>5 Users</td>
+                <td>Unlimited</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>10 Sites</td>
+                <td>50 Sites</td>
+                <td>100 Sites</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>50 MB</td>
+                <td>250 MB</td>
+                <td>1 GB</td>
+                <td>Unlimited</td>
+            </tr>
+            <tr>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+                <td>Included</td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-times"></i></td>
+                <td><i class="fa fa-check"></i></td>
+            </tr>
+            <tr>
+                <td><a href="#">Sign Up</a></td>
+                <td><a href="#">Sign Up</a></td>
+                <td><a href="#">Sign Up</a></td>
+                <td><a href="#">Sign Up</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>
 </html>
