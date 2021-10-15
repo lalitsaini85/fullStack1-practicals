@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter: JS Project-1</title>
+    <style>
+        #container{
+            background-color: gray;
+            text-align: center;
+        }
+        h1{
+            color: antiquewhite;
+        }
+        #para{
+            font-size: 40px;
+            padding: 10px;
+        }
+        #dec{
+            background-color: yellow;
+            padding: 20px;
+            margin-right: 50px;
+            font-size: 30px;
+        }
+        #inc{
+            background-color: yellow;
+            padding: 20px;
+            margin-left: 50px;
+            font-size: 30px;
+        }
+        #dec:hover{
+            background-color: coral;
+        }
+        #inc:hover{
+            background-color: coral;
+        }
+
+    </style>
+</head>
+<body id="container">
+    <h1>COUNTER</h1>
+    <p id="para"><button id="dec" onclick="decrease()">-</button><span id="counter">0</span><button id="inc" onclick="increase()">+</button></p>
+        <script>
+            let x = document.getElementById("counter");
+            function decrease(){
+                if(x.innerText==0){
+                    x.innerHTML = 0;
+                }
+                else{
+                    x.innerHTML--;
+                }
+            }
+            function increase(){
+                x.innerHTML++;
+            }
+        </script>
+</body>
+</html>
